@@ -157,7 +157,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/boton_CE"
+                android:id="@+id/boton_ce"
                 android:text="CE"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
