@@ -21,12 +21,14 @@
         <TextView
             android:id="@+id/resultado"
             android:layout_width="match_parent"
+            android:layout_marginEnd="50sp"
+            android:layout_marginStart="50sp"
             android:layout_height="wrap_content"
-            android:text="1"
+            android:text="0"
             android:gravity="end"
             android:textColor="@color/white"
             android:textSize="35sp"
-            android:background="@color/gray"
+            android:background="#41434A"
             android:layout_marginBottom="50sp"/>
 
 
@@ -39,35 +41,35 @@
             <Button
                 android:id="@+id/boton_7"
                 android:text="7"
-                android:textSize="25sp"
+                android:textSize="30sp"
                 android:textColor="@color/white"
-                android:layout_width="wrap_content"
+                android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
                 android:id="@+id/boton_8"
-                android:textSize="25sp"
+                android:textSize="30sp"
                 android:text="8"
                 android:textColor="@color/white"
-                android:layout_width="wrap_content"
+                android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
                 android:id="@+id/boton_9"
-                android:textSize="25sp"
+                android:textSize="30sp"
                 android:text="9"
                 android:textColor="@color/white"
-                android:layout_width="match_parent"
+                android:layout_width="90sp"
                 android:layout_height="match_parent"
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
                 android:id="@+id/boton_dividir"
-                android:textSize="25sp"
+                android:textSize="30sp"
                 android:text="/"
-                android:textColor="@color/white"
+                android:textColor="@color/orange"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
@@ -83,9 +85,9 @@
             <Button
                 android:id="@+id/boton_4"
                 android:textSize="30sp"
+                android:layout_width="90sp"
                 android:text="4"
                 android:textColor="@color/white"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
 
@@ -93,8 +95,8 @@
                 android:id="@+id/boton_5"
                 android:text="5"
                 android:textSize="30sp"
+                android:layout_width="90sp"
                 android:textColor="@color/white"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
 
@@ -102,8 +104,8 @@
                 android:id="@+id/boton_6"
                 android:text="6"
                 android:textSize="30sp"
+                android:layout_width="90sp"
                 android:textColor="@color/white"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
 
@@ -112,8 +114,8 @@
                 android:id="@+id/boton_multiplicar"
                 android:text="x"
                 android:textSize="30sp"
-                android:textColor="@color/white"
-                android:layout_width="100sp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/orange"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
 
@@ -129,7 +131,8 @@
                 android:id="@+id/boton_1"
                 android:text="1"
                 android:textColor="@color/white"
-                android:layout_width="wrap_content"
+                android:textSize="30sp"
+                android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
 
@@ -137,7 +140,8 @@
                 android:id="@+id/boton_2"
                 android:text="2"
                 android:textColor="@color/white"
-                android:layout_width="wrap_content"
+                android:textSize="30sp"
+                android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
 
@@ -145,14 +149,16 @@
                 android:id="@+id/boton_3"
                 android:text="3"
                 android:textColor="@color/white"
-                android:layout_width="wrap_content"
+                android:textSize="30sp"
+                android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
                 android:id="@+id/boton_menos"
                 android:text="-"
-                android:textColor="@color/white"
+                android:textColor="@color/orange"
+                android:textSize="30sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
@@ -169,7 +175,9 @@
                 android:id="@+id/boton_ce"
                 android:text="CE"
                 android:textColor="@color/white"
-                android:layout_width="wrap_content"
+                android:backgroundTint="@color/orange"
+                android:textSize="30sp"
+                android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
 
@@ -177,22 +185,26 @@
                 android:id="@+id/boton_0"
                 android:textColor="@color/white"
                 android:text="0"
-                android:layout_width="wrap_content"
+                android:textSize="30sp"
+                android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
                 android:id="@+id/boton_igual"
                 android:textColor="@color/white"
+                android:backgroundTint="@color/orange"
                 android:text="="
-                android:layout_width="wrap_content"
+                android:textSize="30sp"
+                android:layout_width="90sp"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
                 android:id="@+id/boton_mas"
-                android:textColor="@color/white"
+                android:textColor="@color/orange"
                 android:text="+"
+                android:textSize="30sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
