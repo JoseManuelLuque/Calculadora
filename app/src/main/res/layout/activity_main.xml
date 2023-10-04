@@ -8,8 +8,9 @@
 
     <LinearLayout
         android:id="@+id/layout_principal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:background="@color/black"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
@@ -38,6 +39,7 @@
             <Button
                 android:id="@+id/boton_7"
                 android:text="7"
+                android:textSize="25sp"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -45,6 +47,7 @@
 
             <Button
                 android:id="@+id/boton_8"
+                android:textSize="25sp"
                 android:text="8"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
@@ -53,6 +56,7 @@
 
             <Button
                 android:id="@+id/boton_9"
+                android:textSize="25sp"
                 android:text="9"
                 android:textColor="@color/white"
                 android:layout_width="match_parent"
@@ -61,6 +65,7 @@
 
             <Button
                 android:id="@+id/boton_dividir"
+                android:textSize="25sp"
                 android:text="/"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
@@ -71,12 +76,13 @@
 
         <LinearLayout
             android:id="@+id/fila3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/boton_4"
+                android:textSize="30sp"
                 android:text="4"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
@@ -86,6 +92,7 @@
             <Button
                 android:id="@+id/boton_5"
                 android:text="5"
+                android:textSize="30sp"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -94,6 +101,7 @@
             <Button
                 android:id="@+id/boton_6"
                 android:text="6"
+                android:textSize="30sp"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -103,8 +111,9 @@
             <Button
                 android:id="@+id/boton_multiplicar"
                 android:text="x"
+                android:textSize="30sp"
                 android:textColor="@color/white"
-                android:layout_width="wrap_content"
+                android:layout_width="100sp"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
 
@@ -112,7 +121,7 @@
 
         <LinearLayout
             android:id="@+id/fila4"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -152,7 +161,7 @@
 
         <LinearLayout
             android:id="@+id/fila5"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
