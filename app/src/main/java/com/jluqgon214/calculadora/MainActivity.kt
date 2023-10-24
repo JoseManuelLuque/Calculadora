@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
 
     var calculo = Calculo()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -56,91 +55,91 @@ class MainActivity : AppCompatActivity() {
         boton9 = findViewById(R.id.boton_9)
         boton0 = findViewById(R.id.boton_0)
 
-        boton_CE.setOnClickListener(){
+        boton_CE.setOnClickListener{
             calculo.operacion = ""
             resultado.text = "0"
         }
 
-        boton_atras.setOnClickListener() {
+        boton_atras.setOnClickListener {
             calculo.operacion = calculo.operacion.dropLast(1)
             resultado.text = calculo.operacion
         }
 
-        boton_punto.setOnClickListener() {
+        boton_punto.setOnClickListener {
             calculo.operacion += "."
             resultado.text = calculo.operacion
         }
 
-        boton_igual.setOnClickListener() {
-            resultado.text = calculo.Calcular().toString()
+        boton_igual.setOnClickListener {
+            resultado.text = calculo.calcular().toString()
             calculo.operacion = ""
         }
 
-        boton1.setOnClickListener() {
+        boton1.setOnClickListener {
             calculo.operacion += 1
             resultado.text = calculo.operacion
         }
 
-        boton2.setOnClickListener() {
+        boton2.setOnClickListener {
             calculo.operacion += 2
             resultado.text = calculo.operacion
         }
 
-        boton3.setOnClickListener() {
+        boton3.setOnClickListener {
             calculo.operacion += 3
             resultado.text = calculo.operacion
         }
 
-        boton4.setOnClickListener() {
+        boton4.setOnClickListener {
             calculo.operacion += 4
             resultado.text = calculo.operacion
         }
 
-        boton5.setOnClickListener() {
+        boton5.setOnClickListener {
             calculo.operacion += 5
             resultado.text = calculo.operacion
         }
 
-        boton6.setOnClickListener() {
+        boton6.setOnClickListener {
             calculo.operacion += 6
             resultado.text = calculo.operacion
         }
 
-        boton7.setOnClickListener() {
+        boton7.setOnClickListener {
             calculo.operacion += 7
             resultado.text = calculo.operacion
         }
 
-        boton8.setOnClickListener() {
+        boton8.setOnClickListener {
             calculo.operacion += 8
             resultado.text = calculo.operacion
         }
 
-        boton9.setOnClickListener() {
+        boton9.setOnClickListener {
             calculo.operacion += 9
             resultado.text = calculo.operacion
         }
 
-        boton0.setOnClickListener() {
+        boton0.setOnClickListener {
             calculo.operacion += 0
             resultado.text = calculo.operacion
         }
 
-        boton_mas.setOnClickListener() {
+        boton_mas.setOnClickListener {
             if (!comprobarSignos(calculo.operacion)) {
                 calculo.operacion += "+"
                 resultado.text = calculo.operacion
             }
         }
 
-        boton_menos.setOnClickListener() {
+        boton_menos.setOnClickListener {
             if (!comprobarSignos(calculo.operacion)) {
                 calculo.operacion += "-"
                 resultado.text = calculo.operacion
             }
         }
 
-        boton_multiplicar.setOnClickListener() {
+        boton_multiplicar.setOnClickListener {
             if (!comprobarSignos(calculo.operacion)) {
                 calculo.operacion += "x"
                 resultado.text = calculo.operacion
@@ -148,7 +147,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        boton_dividir.setOnClickListener() {
+        boton_dividir.setOnClickListener {
             if (!comprobarSignos(calculo.operacion)) {
                 calculo.operacion += "/"
                 resultado.text = calculo.operacion

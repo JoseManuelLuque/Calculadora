@@ -1,23 +1,23 @@
 package com.jluqgon214.calculadora
 
-class Calculo() {
+class Calculo {
 
     var resultado = 0.toDouble()
 
     var operacion = ""
 
-    fun Calcular(): Double{
+    fun calcular(): Double{
         var antes = false
         var numero1 = ""
         var numero2 = ""
 
         for(numero in operacion) {
             if (numero.isDigit() || numero.toString() == ".") {
-                if (antes == false) {
-                    numero1 = numero1 + numero
+                if (!antes) {
+                    numero1 += numero
                 }
                 else {
-                    numero2 = numero2 + numero
+                    numero2 += numero
                 }
             }
 
