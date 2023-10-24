@@ -172,8 +172,8 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/boton_ce"
-                android:text="CE"
+                android:id="@+id/boton_atras"
+                android:text="@string/botonAtras"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/orange"
                 android:textSize="30sp"
@@ -191,10 +191,10 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
-                android:id="@+id/boton_igual"
+                android:id="@+id/boton_punto"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/orange"
-                android:text="="
+                android:text="@string/punto"
                 android:textSize="30sp"
                 android:layout_width="90sp"
                 android:layout_height="wrap_content"
@@ -203,12 +203,38 @@
             <Button
                 android:id="@+id/boton_mas"
                 android:textColor="@color/orange"
-                android:text="+"
+                android:text="@string/simboloSuma"
                 android:textSize="30sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"/>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15sp">
+
+            <Button
+                android:id="@+id/boton_ce"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/orange"
+                android:textSize="30sp"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:text="@string/botonCE"
+                style="?android:attr/buttonBarButtonStyle"/>
+            <Button
+                android:id="@+id/boton_igual"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/orange"
+                android:textSize="30sp"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:text="="
+                style="?android:attr/buttonBarButtonStyle"/>
         </LinearLayout>
     </LinearLayout>
 

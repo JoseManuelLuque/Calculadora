@@ -1,34 +1,23 @@
 package com.jluqgon214.calculadora
 
-class Calculo(num1: Int, num2: Int, res: Int, op: String) {
+class Calculo() {
 
-    var numero1 = num1
+    var resultado = 0.toDouble()
 
-    var numero2 = num2
+    var operacion = ""
 
-    var resultado = res
-
-    var operacion = op
-
-    init {
-        numero1 = num1
-        numero2 = num2
-        resultado = res
-        operacion = op
-    }
-
-    fun Calcular(operacion: String): Int{
-        var num1 = ""
-        var num2 = ""
+    fun Calcular(): Double{
         var antes = false
+        var numero1 = ""
+        var numero2 = ""
 
         for(numero in operacion) {
-            if (numero.isDigit()) {
+            if (numero.isDigit() || numero.toString() == ".") {
                 if (antes == false) {
-                    num1 = num1 + numero
+                    numero1 = numero1 + numero
                 }
                 else {
-                    num2 = num2 + numero
+                    numero2 = numero2 + numero
                 }
             }
 
@@ -37,27 +26,26 @@ class Calculo(num1: Int, num2: Int, res: Int, op: String) {
             }
         }
 
-        var resultado = 0
-
         for (signo in operacion) {
             if (signo.toString() == "+"){
-                resultado = num1.toInt() + num2.toInt()
+                resultado = numero1.toDouble() + numero2.toDouble()
                 break
             }
             if (signo.toString() == "-"){
-                resultado = num1.toInt() - num2.toInt()
+                resultado = numero1.toDouble() - numero2.toDouble()
                 break
             }
             if (signo.toString() == "x"){
-                resultado = num1.toInt() * num2.toInt()
+                resultado = numero1.toDouble() * numero2.toDouble()
                 break
             }
             if (signo.toString() == "/"){
-                resultado = num1.toInt() / num2.toInt()
+                resultado = numero1.toDouble() / numero2.toDouble()
                 break
             }
         }
 
+        operacion = ""
         return resultado
     }
 }

@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
 
     //Declaración de variables
     private lateinit var resultado: TextView
+    private lateinit var boton_atras: Button
+    private lateinit var boton_punto: Button
     private lateinit var boton_CE: Button
     private lateinit var boton_igual: Button
     private lateinit var boton_mas: Button
@@ -27,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var boton9: Button
     private lateinit var boton0: Button
 
-    var calculo = Calculo(0, 0, 0, "")
+    var calculo = Calculo()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,6 +44,8 @@ class MainActivity : AppCompatActivity() {
         boton_menos = findViewById(R.id.boton_menos)
         boton_multiplicar = findViewById(R.id.boton_multiplicar)
         boton_dividir = findViewById(R.id.boton_dividir)
+        boton_atras = findViewById(R.id.boton_atras)
+        boton_punto = findViewById(R.id.boton_punto)
         boton1 = findViewById(R.id.boton_1)
         boton2 = findViewById(R.id.boton_2)
         boton3 = findViewById(R.id.boton_3)
@@ -60,12 +64,23 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        boton_atras.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                calculo.operacion = calculo.operacion.dropLast(1)
+                resultado.text = calculo.operacion
+            }
+        })
+
+        boton_punto.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                calculo.operacion += "."
+                resultado.text = calculo.operacion
+            }
+        })
+
         boton_igual.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                println(calculo.Calcular(calculo.operacion))
-
-                resultado.text = calculo.Calcular(calculo.operacion).toString()
-
+                resultado.text = calculo.Calcular().toString()
                 calculo.operacion = ""
             }
         })
@@ -142,30 +157,47 @@ class MainActivity : AppCompatActivity() {
 
         boton_mas.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                calculo.operacion += "+"
-                resultado.text = calculo.operacion
+                if (!comprobarSignos(calculo.operacion)) {
+                    calculo.operacion += "+"
+                    resultado.text = calculo.operacion
+                }
             }
         })
 
         boton_menos.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                calculo.operacion += "-"
-                resultado.text = calculo.operacion
+                if (!comprobarSignos(calculo.operacion)) {
+                    calculo.operacion += "-"
+                    resultado.text = calculo.operacion
+                }
             }
         })
 
         boton_multiplicar.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                calculo.operacion += "x"
-                resultado.text = calculo.operacion
+                if (!comprobarSignos(calculo.operacion)) {
+                    calculo.operacion += "x"
+                    resultado.text = calculo.operacion
+                }
             }
         })
 
         boton_dividir.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                calculo.operacion += "/"
-                resultado.text = calculo.operacion
+                if (!comprobarSignos(calculo.operacion)) {
+                    calculo.operacion += "/"
+                    resultado.text = calculo.operacion
+                }
             }
         })
     }
+}
+
+fun comprobarSignos(cadena: String): Boolean{
+    for (caracter in cadena){
+        if (caracter.toString() in arrayOf("+", "-", "/", "x")){
+            return true
+        }
+    }
+    return cadena.isEmpty()
 }
