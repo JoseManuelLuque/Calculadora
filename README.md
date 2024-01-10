@@ -1,2 +1,2 @@
 # Calculadora
-App de Android de una CAlculadora Funcional pero sin decimales
+App de Android de una Calculadora Funcional pero sin decimales
